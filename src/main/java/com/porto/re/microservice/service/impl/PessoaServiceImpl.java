@@ -22,4 +22,9 @@ public class PessoaServiceImpl implements PessoaService {
         return repository.save(mapper.toPessoa(dto));
     }
 
+    @Override
+    public Pessoa find(Long id) {
+        return repository.findById(id).get();
+    }
+
 }
